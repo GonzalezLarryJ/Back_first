@@ -38,7 +38,7 @@ app.use(morgan('dev'));
 }); */
 
 // Rutas
-//app.use('/api/example', exampleRoutes);
+//app.use('/api/', exampleRoutes);
 
 // Ruta de prueba
 app.get('/', (req, res) => {
@@ -53,5 +53,5 @@ app.use((err, req, res, next) => {
 
 // Inicio del servidor
 app.listen(port, () => {
-    console.log(`Servidor en ejecución en el puerto ${port}`);
+    console.log(`Servidor en ejecución en el puerto: http://localhost:${port}/`);
 });

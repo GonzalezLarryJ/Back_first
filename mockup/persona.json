@@ -1,0 +1,6 @@
+[
+    {"Id":1,"Nombre":"Juan","Apellido":"Valdez","Telefono":"1150247798","Email":"juan@gmail.com","FechaCreacion":"2024-06-02T00:00:00Z","FechaActualizacion":"2024-06-02T00:00:00Z","Tipo_Persona":"vendedor"},
+    {"Id":2,"Nombre":"Marcos","Apellido":"Mendez","Telefono":"1150247798","Email":"marcos@gmail.com","FechaCreacion":"2024-06-02T00:00:00Z","FechaActualizacion":"2024-06-02T00:00:00Z","Tipo_Persona":"vendedor"},
+    {"Id":3,"Nombre":"Jose","Apellido":"Perez","Telefono":"1150247798","Email":"jose@gmail.com","FechaCreacion":"2024-06-02T00:00:00Z","FechaActualizacion":"2024-06-02T00:00:00Z","Tipo_Persona":"vendedor"},
+    {"Id":4,"Nombre":"Lila","Apellido":"Mendoza","Telefono":"1150247798","Email":"lila@gmail.com","FechaCreacion":"2024-06-02T00:00:00Z","FechaActualizacion":"2024-06-02T00:00:00Z","Tipo_Persona":"vendedor"}
+]
