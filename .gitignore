@@ -8,3 +8,6 @@ yarn-error.log
 logs
 *.log
 logs/*.log
+
+#dotenv
+.env
