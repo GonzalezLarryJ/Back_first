@@ -24,19 +24,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Middleware para el registro de solicitudes HTTP
 app.use(morgan('dev'));
 
-// Conexión a la base de datos
-/* mongoose.connect('mongodb://localhost:27017/mydatabase', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-})
-.then(() => {
-    console.log('Conexión a la base de datos exitosa');
-})
-.catch(err => {
-    console.error('Error al conectar a la base de datos', err);
-}); */
-
 // Rutas
 //app.use('/api/', exampleRoutes);
 

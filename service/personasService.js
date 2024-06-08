@@ -1,0 +1,1 @@
+const personaRepository = require('../Repository/personaRepository');
