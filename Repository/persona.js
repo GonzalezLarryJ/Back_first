@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const personaSchema = new mongoose.Schema({
-    Id:{type:int, required:true},
+const personaSchema = mongoose.Schema({
     Nombre:{type:String, required:true},
     Apellido:{type:String, required:true},
     Telefono:{type:String, required:true},
@@ -10,5 +9,4 @@ const personaSchema = new mongoose.Schema({
     Tipo_persona:{type:String, required:true}
 });
 
-const Persona = mongoose.Model('Persona',personaSchema);
-module.exports = Persona;
+module.exports = mongoose.model('Persona',personaSchema);

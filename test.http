@@ -1,0 +1,36 @@
+### Consultado personas
+GET http://localhost:3000/api/persona/
+
+### buscar una persona por Id.
+GET http://localhost:3000/api/persona/6664c23d00f3085b0d678786
+
+### creando personas
+POST http://localhost:3000/api/persona/
+Content-Type: application/json
+
+{
+    "Nombre":"Luis",
+    "Apellido":"Mendoza",
+    "Telefono":"1150298544",
+    "Email":"manuel@gmail.com",
+    "FechaCreacion":"2024-06-08T14:35:22Z",
+    "FechaActualizacion":"2024-06-08T14:35:22Z",
+    "Tipo_persona":"comprador"
+}
+
+### editar persona
+PUT http://localhost:3000/api/persona/6664d265bec5c07fadc40641
+Content-Type: application/json
+
+{
+    "Nombre":"Eduardo Maria P",
+    "Apellido": "Mendoza Aguilera",
+    "Telefono":"1150297444",
+    "Email":"eduardo@hotmail.com",
+    "FechaCreacion":"2024-06-08T14:35:22Z",
+    "FechaActualizacion":"2024-06-08T14:35:22Z",
+    "Tipo_persona":"comprador"
+}
+
+### Eliminar una persona
+DELETE  http://localhost:3000/api/persona/6664d265bec5c07fadc40641
