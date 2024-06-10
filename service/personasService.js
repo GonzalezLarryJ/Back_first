@@ -8,9 +8,10 @@ exports.getPersonas = ()=>{
     }
 }
 
-exports.getPersona = (id)=>{
+exports.getPersona = async (id)=>{
     try {
-        return personaRepository.getPersona(id);
+        const persona = personaRepository.getPersona(id);
+        return persona;
     } catch (error) {
         console.log(error);
     }

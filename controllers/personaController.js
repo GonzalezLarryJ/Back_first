@@ -1,4 +1,4 @@
-const Persona = require('../Repository/persona');
+
 const personaService = require('../service/personasService');
 
 exports.getPersonas = async(req, res)=>{ 
@@ -11,11 +11,13 @@ exports.getPersonas = async(req, res)=>{
 }
 
 exports.getPersona = async(req, res)=>{
+    let id =  req.params.id
     try {
         let persona = await personaService.getPersona(id);
         res.status(200).send(persona);
     } catch (error) {
-        res.sttus(500).send('Hubo un error en la consulta del registro');
+        res.status(500).send('Hubo un error en la consulta del registro');
+        
     }
 }
 

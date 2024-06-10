@@ -1,12 +1,12 @@
 const Persona = require('./persona');
-const conectarDB = require('../db/db');
+//const conectarDB = require('../db/db');
 
-conectarDB();
+//conectarDB();
 
 exports.getPersonas = async () =>{
     try {
         let personas = await Persona.find();
-        console.log(personas);
+        //console.log(personas);
         return personas
     } catch (error) {
         console.log(error);
@@ -15,11 +15,7 @@ exports.getPersonas = async () =>{
 
 exports.getPersona = async (id)=>{
     try {
-        let persona = await Persona.findById(id);
-        if (!persona) {
-            console.log("No existe la persona que quieres consultar");
-            return "No se encontró la persona..!"
-        }
+        let persona = await Persona.findOne({_id:id});
         return persona;
     } catch (error) {
         console.log(error);
@@ -40,12 +36,12 @@ exports.editPersona = async(id,personaData)=>{
     try {
         if (!id) {
             console.log("No encontramos el id del registro a editar");
-            return "no se ecnontró el Id del registro a editar";
+            return "no se encontró el Id del registro a editar";
             }
-        let persona = await Persona.findById(id)
-        if (!persona) {
-            console.log("No existe el registro a editar");
-            return "no se encontró el registro a editar";
+        let personaB = await Persona.findById({_id:id})
+        if (!personaB) {
+            console.log("No existe el registro");
+            return "no se encontró el registro";
         }
         const updatePersona = await Persona.findOneAndReplace({_id:id},personaData)
         return updatePersona;
