@@ -30,3 +30,25 @@ exports.createComprador = async(req, res)=>{
     }
 }
 
+exports.editComprador = async (req, res)=>{
+    let comprador = req.body;
+    let id = req.params.id;
+    try {
+        let compradorEditado = await compradorService.editComprador(id, comprador);
+        res.status(200).send(compradorEditado);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send("hubo un error al editar el comprador");
+    }
+}
+
+exports.deleteComprador = async(req, res)=>{
+    try {
+        let id = req.params.id;
+        await compradorService.deleteComprador(id);
+        res.status(200).send('Comprador eliminado..!');
+    } catch (error) {
+        res.status(500).send('Hubo un error al tratar de eliminar el registro');
+    }
+}
+

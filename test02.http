@@ -11,7 +11,22 @@ Content-Type: application/json
 {
     "idauto":1,
     "idpersona":1,
-    "consulta":"¿Cual es el precio del auto?",
+    "consulta":"¿Cual es el precio de los accesorios?",
     "fechaCreacion":"2024-06-08T14:35:22Z",
     "fechaActualizacion":"2024-06-08T14:35:22Z"
 }
+
+### Editar comprador
+PUT  http://localhost:3000/api/comprador/66671972ce72fc1cdbf2253d
+Content-Type: application/json
+
+{
+    "idauto":2,
+    "idpersona":2,
+    "consulta":"Otra pregunta",
+    "fechaCreacion":"2024-06-08T14:35:22Z",
+    "fechaActualizacion":"2024-06-08T14:35:22Z"
+}
+
+###
+DELETE http://localhost:3000/api/comprador/66677689a92e7b1e51a542d6

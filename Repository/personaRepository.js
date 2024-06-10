@@ -15,7 +15,7 @@ exports.getPersonas = async () =>{
 
 exports.getPersona = async (id)=>{
     try {
-        let persona = await Persona.findOne({_id:id});
+        let persona = await Persona.findById(id);
         return persona;
     } catch (error) {
         console.log(error);

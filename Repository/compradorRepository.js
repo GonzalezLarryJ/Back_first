@@ -36,3 +36,34 @@ exports.createComprador = async(comprador)=>{
     }
 }
 
+exports.editComprador = async(id, compradorData)=>{
+    try {
+        if (!id) {
+            console.log("No se encontró el Id");
+            return "Id no encontrado";
+        }
+        let compradorB = await Comprador.findById({_id:id});
+        if (!compradorB) {
+            console.log("No se encontró el registro");
+            return "No existe el registro"
+        }
+        const updateComprador = await Comprador.findOneAndReplace({_id:id},compradorData);
+        return updateComprador;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+exports.deleteComprador = async(id)=>{
+    try {
+        if (!id) {
+            console.log("No consigo el Id del comprador..!");
+            return "no se encontró el Id del comprador"
+        }
+        const eliminado = await Comprador.findOneAndDelete({_id:id});
+        return eliminado;
+    } catch (error) {
+        console.log(error);
+    }
+}
+

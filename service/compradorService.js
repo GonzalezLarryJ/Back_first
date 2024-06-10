@@ -24,6 +24,22 @@ exports.createComprador = async(comprador)=>{
     }
 }
 
+exports.editComprador = async(id, comprador) =>{
+    try {
+        return compradorRepository.editComprador(id,comprador);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+exports.deleteComprador = async(id)=>{
+    try {
+        return compradorRepository.deleteComprador(id);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 
 
 
