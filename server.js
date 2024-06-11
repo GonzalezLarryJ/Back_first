@@ -7,8 +7,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const conectarDB = require('./db/db');
-conectarDB();
 const cors = require('cors');
+
+conectarDB();
 
 
 //MIDDLEWARES
