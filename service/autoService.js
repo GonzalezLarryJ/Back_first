@@ -21,7 +21,6 @@ exports.getAutoById = async (id) => {
     }
 }
 
-
 exports.updateAuto = (id,autoInfo) => {
     try {
         return autoRepository.updateAutoRepo(id,autoInfo);

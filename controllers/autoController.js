@@ -52,6 +52,6 @@ exports.deleteAuto = async(req,res) => {
         res.status(200).send("El auto se eliminó con éxito");
     } catch (error) {
         console.log(error);
-        res.status(500).send("Hubo un error al editar los datos del auto")
+        res.status(500).send("Hubo un error al eliminar los datos del auto")
     }
 }
