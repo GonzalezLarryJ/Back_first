@@ -1,36 +1,32 @@
 //importacion de modulos necesarios
-const bodyParser = require('body-parser');
 const express = require('express');
-const mongoose = require('mongoose');
-//const cors = require('cors');
-const morgan = require('morgan');
-
-//Importación de rutas
-const example =require('./routes/exampleRoute');
-
-//Inicializar la aplciación
-const app = express();
-
-
-//Configuración del puerto
+const personaRouter = require('./routers/personaRouter');
+const routerComprador = require('./routers/compradorRouter');
 const port = process.env.port || 3000;
+const app = express();
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const conectarDB = require('./db/db');
+const cors = require('cors');
+
+conectarDB();
+
 
 //MIDDLEWARES
-//Middleware para manejo de cors
-//app.use(cors());
-// Middleware para el manejo de JSON y datos URL encoded
+app.use(cors());
+//app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-// Middleware para el registro de solicitudes HTTP
 app.use(morgan('dev'));
-
+app.use('/api/persona', personaRouter);
+app.use('/api/comprador', routerComprador);
 // Rutas
-//app.use('/api/', exampleRoutes);
-
 // Ruta de prueba
 app.get('/', (req, res) => {
     res.send('¡Hola, mundo!');
 });
+
+
 
 // Manejo de errores
 app.use((err, req, res, next) => {
