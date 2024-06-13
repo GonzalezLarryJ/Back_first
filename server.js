@@ -2,6 +2,8 @@
 const express = require('express');
 const personaRouter = require('./routers/personaRouter');
 const routerComprador = require('./routers/compradorRouter');
+const autoRouter = require('./routers/autoRouter');
+const imagenAutoRouter = require('./routers/imagenAutoRouter');
 const port = process.env.port || 3000;
 const app = express();
 const bodyParser = require('body-parser');
@@ -20,6 +22,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use('/api/persona', personaRouter);
 app.use('/api/comprador', routerComprador);
+app.use('/api/autos',autoRouter);
+app.use('/api/imagenAuto',imagenAutoRouter);
 // Rutas
 // Ruta de prueba
 app.get('/', (req, res) => {

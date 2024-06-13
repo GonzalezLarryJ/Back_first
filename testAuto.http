@@ -1,0 +1,41 @@
+GET http://127.0.0.1:3000/api/autos HTTP/1.1
+
+### hago un get a todo lo que tengo
+
+GET http://127.0.0.1:3000/api/autos/666a382c97ce2dd22a364097 HTTP/1.1
+
+### hago get por ID de auto
+
+POST  http://127.0.0.1:3000/api/autos/
+Content-Type: application/json
+
+{
+    "marca":"bmw",
+    "modelo":"m3",
+    "anio":1995,
+    "estado":"usado",
+    "precio":5000000,
+    "kilometros":30000,
+    "fechaCreacion":"2010-06-08T14:35:22Z",
+    "fechaActualizacion":"2012-06-08T14:35:22Z"
+} 
+
+###
+
+DELETE http://127.0.0.1:3000/api/autos/666a382c97ce2dd22a364097
+
+###
+
+PUT  http://127.0.0.1:3000/api/autos/666a382c97ce2dd22a364097
+Content-Type: application/json
+
+{
+    "marca":"mercedes benz",
+    "modelo":"c200",
+    "anio":1995,
+    "estado":"usado",
+    "precio":5000000,
+    "kilometros":30000,
+    "fechaCreacion":"2010-06-08T14:35:22Z",
+    "fechaActualizacion":"2012-06-08T14:35:22Z"
+} 

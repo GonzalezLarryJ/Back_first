@@ -24,8 +24,7 @@ exports.getAutosById = async (id) => {
     try {
         let auto = await Autos.findById(id)
         if(!auto) {
-            console.log("no consegui el auto")
-            return "no consegui el auto (repository)";
+            return "no consegui el auto";
         } 
         return auto;
     } catch (error) {
@@ -80,8 +79,7 @@ exports.deleteAutoRepo = async (id) => {
     try {
         let auto = await Autos.findById(id);
         if(!auto){
-            console.log("No existe el auto a eliminar")
-            return ""
+            return "No existe el auto a eliminar"
         } 
         await Autos.findOneAndDelete({_id:id});
     } catch (error) {

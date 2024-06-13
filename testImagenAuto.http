@@ -1,0 +1,33 @@
+GET http://127.0.0.1:3000/api/imagenAuto HTTP/1.1
+
+### hago un get a todo lo que tengo
+
+GET http://127.0.0.1:3000/api/imagenAuto/666a32ae8b4b4388d5b67a1e HTTP/1.1
+
+### hago get por ID de auto
+
+POST  http://127.0.0.1:3000/api/imagenAuto
+Content-Type: application/json
+
+{
+    "ruta":"c://autos/bmw/usados",
+    "descripcion":"modelo m3.jpg",
+    "fechaCreacion":"2010-06-08T14:35:22Z",
+    "fechaActualizacion":"2011-06-08T14:35:22Z"
+} 
+
+###
+
+DELETE http://127.0.0.1:3000/api/imagenAuto/666a32ae8b4b4388d5b67a1e
+
+###
+
+PUT  http://127.0.0.1:3000/api/imagenAuto/666a32ae8b4b4388d5b67a1e
+Content-Type: application/json
+
+{
+    "ruta":"c://autos/bmw/nuevos",
+    "descripcion":"modelo m3.jpg",
+    "fechaCreacion":"2013-06-08T14:35:22Z",
+    "fechaActualizacion":"2015-06-08T14:35:22Z"
+} 
