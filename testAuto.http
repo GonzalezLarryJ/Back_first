@@ -10,23 +10,23 @@ POST  http://127.0.0.1:3000/api/autos/
 Content-Type: application/json
 
 {
-    "marca":"bmw",
-    "modelo":"m3",
-    "anio":1995,
-    "estado":"usado",
+    "marca":"Chevrolet",
+    "modelo":"renegado primen",
+    "anio":2005,
+    "estado":"nuevo",
     "precio":5000000,
-    "kilometros":30000,
+    "kilometros":30500,
     "fechaCreacion":"2010-06-08T14:35:22Z",
     "fechaActualizacion":"2012-06-08T14:35:22Z"
 } 
 
 ###
 
-DELETE http://127.0.0.1:3000/api/autos/666a382c97ce2dd22a364097
+DELETE http://127.0.0.1:3000/api/autos/665c8894a073cf9e2b76c530
 
 ###
 
-PUT  http://127.0.0.1:3000/api/autos/666a382c97ce2dd22a364097
+PUT  http://127.0.0.1:3000/api/autos/666ad63876949e380d2a3fe5
 Content-Type: application/json
 
 {

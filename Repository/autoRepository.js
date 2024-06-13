@@ -1,7 +1,7 @@
 const Autos = require('./Auto')
 const conectarDb = require('../db/db')
 
-conectarDb();
+//conectarDb();
 
 /**
  * Busca todos los autos 
@@ -42,6 +42,7 @@ exports.createAutoRepo = async(auto) => {
     try{
          let newAuto = Autos(auto);
         await newAuto.save();
+        return newAuto;
     }
     catch (error) {
         console.log(error);

@@ -1,7 +1,7 @@
 const ImagenAuto = require('./imagenAuto')
 const conectarDb = require('../db/db')
 
-conectarDb();
+//conectarDb();
 
 /**
  * Busca todos 

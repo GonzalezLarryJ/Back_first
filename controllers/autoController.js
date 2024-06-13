@@ -23,7 +23,7 @@ exports.getAuto = async (req,res) => {
 
 exports.createAuto = async (req,res) => {
     try {
-        await autoService.createAuto(req.body)
+        const auto = await autoService.createAuto(req.body)
         res.status(200).send();
     } catch (error) {
         console.log(error);

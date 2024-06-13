@@ -6,7 +6,7 @@ exports.getAutos = () => {
 
 exports.createAuto = (auto) => {
     try {
-        autoRepository.createAutoRepo(auto);
+        return autoRepository.createAutoRepo(auto);
     }
      catch (error) {
         console.log(error);

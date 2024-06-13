@@ -10,19 +10,19 @@ POST  http://127.0.0.1:3000/api/imagenAuto
 Content-Type: application/json
 
 {
-    "ruta":"c://autos/bmw/usados",
-    "descripcion":"modelo m3.jpg",
+    "ruta":"malo",
+    "descripcion":"modelo m55.jpg",
     "fechaCreacion":"2010-06-08T14:35:22Z",
     "fechaActualizacion":"2011-06-08T14:35:22Z"
 } 
 
 ###
 
-DELETE http://127.0.0.1:3000/api/imagenAuto/666a32ae8b4b4388d5b67a1e
+DELETE http://127.0.0.1:3000/api/imagenAuto/666ad7f6989ae114452b0472
 
 ###
 
-PUT  http://127.0.0.1:3000/api/imagenAuto/666a32ae8b4b4388d5b67a1e
+PUT  http://127.0.0.1:3000/api/imagenAuto/666ad7da989ae114452b046c
 Content-Type: application/json
 
 {
