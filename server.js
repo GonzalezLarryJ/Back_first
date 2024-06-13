@@ -1,11 +1,14 @@
 //importacion de modulos necesarios
 const express = require('express');
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('./swagger-output.json')
 const personaRouter = require('./routers/personaRouter');
 const routerComprador = require('./routers/compradorRouter');
 const autoRouter = require('./routers/autoRouter');
 const imagenAutoRouter = require('./routers/imagenAutoRouter');
 const port = process.env.port || 3000;
 const app = express();
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const conectarDB = require('./db/db');

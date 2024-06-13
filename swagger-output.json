@@ -1,0 +1,643 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Concesionaria",
+    "description": "My API Concesionaria en Swagger",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/persona/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "persona",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Nombre": {
+                  "type": "string"
+                },
+                "Apellido": {
+                  "type": "string"
+                },
+                "Telefono": {
+                  "type": "string"
+                },
+                "Email": {
+                  "type": "string"
+                },
+                "FechaCreacion": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "FechaActualizacion": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "Tipo_persona": {
+                  "type": "string"
+                }
+              },
+              "required": ["Nombre", "Apellido", "Telefono", "Email", "FechaCreacion", "FechaActualizacion", "Tipo_persona"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/persona/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "persona",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Nombre": {
+                  "type": "string"
+                },
+                "Apellido": {
+                  "type": "string"
+                },
+                "Telefono": {
+                  "type": "string"
+                },
+                "Email": {
+                  "type": "string"
+                },
+                "FechaCreacion": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "FechaActualizacion": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "Tipo_persona": {
+                  "type": "string"
+                }
+              },
+              "required": ["Nombre", "Apellido", "Telefono", "Email", "FechaCreacion", "FechaActualizacion", "Tipo_persona"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/comprador/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "Comprador",
+        "parameters": [
+          {
+            "name": "comprador",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idauto": {
+                  "type": "number"
+                },
+                "idpersona": {
+                  "type": "number"
+                },
+                "consulta": {
+                  "type": "string"
+                },
+                "fechaCreacion": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "fechaActualizacion": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              },
+              "required": ["idauto", "idpersona", "fechaCreacion", "fechaActualizacion"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/comprador/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "comprador",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idauto": {
+                  "type": "number"
+                },
+                "idpersona": {
+                  "type": "number"
+                },
+                "consulta": {
+                  "type": "string"
+                },
+                "fechaCreacion": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "fechaActualizacion": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              },
+              "required": ["idauto", "idpersona", "fechaCreacion", "fechaActualizacion"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/autos/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+      {
+        "name": "auto",
+        "in": "body",
+        "required": true,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "marca": {
+              "type": "string"
+            },
+            "modelo": {
+              "type": "string"
+            },
+            "anio": {
+              "type": "number"
+            },
+            "estado": {
+              "type": "string"
+            },
+            "precio": {
+              "type": "number"
+            },
+            "kilometros": {
+              "type": "number"
+            },
+            "descripcion": {
+              "type": "string"
+            },
+            "fechaCreacion": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "fechaActualizacion": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": ["marca", "modelo", "anio", "estado"]
+        }
+      }
+    ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/autos/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "Actualiza un auto existente por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "ID del auto a actualizar"
+          },
+          {
+            "name": "auto",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "marca": {
+                  "type": "string"
+                },
+                "modelo": {
+                  "type": "string"
+                },
+                "anio": {
+                  "type": "number"
+                },
+                "estado": {
+                  "type": "string"
+                },
+                "precio": {
+                  "type": "number"
+                },
+                "kilometros": {
+                  "type": "number"
+                },
+                "descripcion": {
+                  "type": "string"
+                },
+                "fechaCreacion": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "fechaActualizacion": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              },
+              "required": ["marca", "modelo", "anio", "estado"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/imagenAuto/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "Sube una nueva imagen para un auto específico",
+        "parameters": [
+          {
+            "name": "imagen",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idauto": {
+                  "type": "string",
+                  "description": "ID del auto al que pertenece la imagen"
+                },
+                "ruta": {
+                  "type": "string",
+                  "description": "URL de la imagen del auto"
+                },
+                "descripcion": {
+                  "type": "string",
+                  "description": "Descripción opcional de la imagen"
+                },
+                "fechaCreacion": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Fecha de creación de la imagen"
+                },
+                "fechaActualizacion": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Fecha de actualizacion de la imagen"
+                }
+              },
+              "required": ["idauto", "imagenURL", "fechaCreacion"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/imagenAuto/{id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "Actualiza los detalles de una imagen de auto existente por su ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "ID de la imagen a actualizar"
+          },
+          {
+            "name": "imagen",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "idauto": {
+                  "type": "string",
+                  "description": "ID del auto al que pertenece la imagen"
+                },
+                "ruta": {
+                  "type": "string",
+                  "description": "URL de la imagen del auto"
+                },
+                "descripcion": {
+                  "type": "string",
+                  "description": "Descripción opcional de la imagen"
+                },
+                "fechaCreacion": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Fecha de actualización de la imagen"
+                },
+                "fechaActualizacion": {
+                  "type": "string",
+                  "format": "date-time",
+                  "description": "Fecha de actualización de la imagen"
+                }
+              },
+              "required": ["idauto", "imagenURL", "fechaActualizacion"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}
