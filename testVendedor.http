@@ -1,0 +1,32 @@
+### consultar todos los vendedores
+get http://localhost:3000/api/vendedor/
+
+### Consultar por Id (revisar)
+get http://localhost:3000/api/vendedor/6670d75cc62a0ffef3e021bb
+
+### Crear vendedor
+POST http://localhost:3000/api/vendedor/
+Content-Type: application/json
+
+{
+    "idauto":2,
+    "fechaCreacion":"2024-06-08T14:35:22Z",
+    "fechaActualizacion":"2024-06-08T14:35:22Z",
+    "consesionaria":1,
+    "idpersona":3
+}
+
+###Editar el registro
+PUT http://localhost:3000/api/vendedor/6670d75cc62a0ffef3e021bb
+Content-Type: application/json
+
+{
+    "idauto":44,
+    "fechaCreacion":"2024-06-08T14:35:22Z",
+    "fechaActualizacion":"2024-06-08T14:35:22Z",
+    "consesionaria":1,
+    "idpersona":4   
+}
+
+###Eliminar registro
+DELETE http://localhost:3000/api/vendedor/6670dbbef784b8211cb36931

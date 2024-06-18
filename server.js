@@ -6,6 +6,7 @@ const personaRouter = require('./routers/personaRouter');
 const routerComprador = require('./routers/compradorRouter');
 const autoRouter = require('./routers/autoRouter');
 const imagenAutoRouter = require('./routers/imagenAutoRouter');
+const vendodorRouter = require('./routers/vendedorRouter');
 const port = process.env.port || 3000;
 const app = express();
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
@@ -27,6 +28,7 @@ app.use('/api/persona', personaRouter);
 app.use('/api/comprador', routerComprador);
 app.use('/api/autos',autoRouter);
 app.use('/api/imagenAuto',imagenAutoRouter);
+app.use('/api/vendedor',vendodorRouter);
 // Rutas
 // Ruta de prueba
 app.get('/', (req, res) => {
